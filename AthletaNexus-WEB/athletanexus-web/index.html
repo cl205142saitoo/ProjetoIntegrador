@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AthletaNexus conecta atletas, treinadores e olheiros a novas oportunidades esportivas.">
+  <title>AthletaNexus — Conexões que revelam talentos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="home" aria-label="AthletaNexus início">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>Athleta<span class="brand-light">Nexus</span></span>
+      </a>
+      <div class="sidebar-label">MENU PRINCIPAL</div>
+      <nav class="main-nav" aria-label="Menu principal">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span> Visão geral</button>
+        <button class="nav-item" data-view="discover"><span class="nav-icon">⌕</span> Descobrir atletas</button>
+        <button class="nav-item" data-view="matches"><span class="nav-icon">♡</span> Matches <span class="nav-count" id="match-count">2</span></button>
+        <button class="nav-item" data-view="opportunities"><span class="nav-icon">↗</span> Oportunidades</button>
+        <button class="nav-item" data-view="messages"><span class="nav-icon">▤</span> Mensagens <span class="unread-dot"></span></button>
+      </nav>
+      <div class="sidebar-label community-label">SUA CONTA</div>
+      <nav class="main-nav">
+        <button class="nav-item" data-view="profile"><span class="nav-icon">◎</span> Meu perfil</button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span> Configurações</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="upgrade-icon">✦</div>
+          <strong>Seu talento merece ser visto.</strong>
+          <p>Complete seu perfil e aumente suas chances de conexão.</p>
+          <button class="text-button" data-view="profile">Completar perfil <span>→</span></button>
+        </div>
+        <button class="user-mini" data-view="profile">
+          <span class="avatar avatar-me" id="sidebar-user-avatar">AN</span>
+          <span class="user-mini-copy"><strong id="sidebar-user-name">Minha conta</strong><small id="sidebar-user-role">Perfil pessoal</small></span>
+          <span class="more">•••</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-sep">/</span><strong id="breadcrumb-current">Visão geral</strong></div>
+        <div class="topbar-actions">
+          <label class="global-search"><span>⌕</span><input id="global-search" type="search" placeholder="Buscar atletas, clubes..." aria-label="Buscar na plataforma"><kbd>⌘ K</kbd></label>
+          <button class="icon-button notification-button" id="notifications" aria-label="Notificações">♧<i></i></button>
+          <button class="top-avatar" id="top-user-avatar" data-view="profile" aria-label="Abrir meu perfil">AN</button>
+        </div>
+      </header>
+      <div class="content" id="content" tabindex="-1">
+        <!-- Conteúdo renderizado pelo JavaScript -->
+      </div>
+      <footer class="footer"><span>© 2026 AthletaNexus</span><span>Conectando potencial a oportunidades.</span><a href="#" data-view="settings">Privacidade e segurança</a></footer>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+
+  <dialog class="modal" id="auth-modal">
+    <form method="dialog" class="modal-close-wrap"><button class="modal-close" aria-label="Fechar">×</button></form>
+    <div class="modal-brand"><span class="brand-mark"><span></span><span></span><span></span></span> AthletaNexus</div>
+    <div id="auth-content"></div>
+  </dialog>
+  <dialog class="modal athlete-modal" id="athlete-modal">
+    <form method="dialog" class="modal-close-wrap"><button class="modal-close" aria-label="Fechar">×</button></form>
+    <div id="athlete-modal-content"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
