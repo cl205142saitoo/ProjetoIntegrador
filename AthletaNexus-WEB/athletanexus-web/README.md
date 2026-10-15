@@ -2,10 +2,6 @@
 
 Projeto feito com HTML, CSS e JavaScript puro, sem frameworks ou instalação de dependências.
 
-## Como executar
-1. Extraia `AthletaNexus-front-end.zip`.
-2. Abra a pasta `athletanexus-web` no Visual Studio Code.
-3. Abra `index.html` no navegador. Para uma experiência mais previsível durante o desenvolvimento, use a extensão Live Server.
 
 ## Fluxo de conta implementado
 - O site inicia na tela de login, sem usuário ou conta previamente cadastrada.
@@ -30,7 +26,7 @@ Projeto feito com HTML, CSS e JavaScript puro, sem frameworks ou instalação de
 - Layout responsivo para computador, tablet e celular
 
 ## Limitações importantes
-Esta é uma demonstração front-end. O cadastro não cria uma conta em servidor e os dados ficam somente no navegador em que foram cadastrados. A função de hash no navegador não substitui autenticação segura de produção; a versão pública deve usar API, banco de dados, hash de senha no servidor (por exemplo Argon2id ou bcrypt), recuperação de senha, validação, controle de sessão e autorização. As mensagens, métricas, perfis de terceiros e oportunidades são dados fictícios de demonstração e não representam usuários ou eventos reais.
+Esta é uma demonstração front-end. O cadastro não cria uma conta em servidor e os dados ficam somente no navegador em que foram cadastrados. A função de hash no navegador não substitui autenticação segura de produção; a versão pública deve usar API, banco de dados, hash de senha no servidor, recuperação de senha, validação, controle de sessão e autorização. As mensagens, métricas, perfis de terceiros e oportunidades são dados fictícios de demonstração e não representam usuários ou eventos reais.
 
 Para limpar as contas de teste, abra as ferramentas de desenvolvedor do navegador e apague a chave `athletanexus_accounts_v1` do armazenamento local do site.
 
